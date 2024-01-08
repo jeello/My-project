@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="design.css">
+    <title>My Gallery</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+          <img src="logo.png" class="logo">
+          <ul>
+              <button onclick="document.location='HomePage.html'" >HOME</button>
+              <button onclick="document.location='AboutUs.html'">ABOUT</button>
+              <button onclick="document.location='Gallery.html'" class="active">GALLERY</button>
+              <button onclick="document.location='Blog.html'">BLOG</button>
+              <button onclick="document.location='Contact.html'">CONTACT</button>
+              <a href="Account.html"><img src="acc.png" class="acc"></a>
+          </ul>
+      </nav>    
+  </header>
+  <!-- sample -->
+<h2 class="my-photos">Browse my Gallery</h2>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 15</div>
+    <img src="img1.jpg">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 15</div>
+    <img src="img2.jpg">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 15</div>
+    <img src="img3.jpg">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 15</div>
+    <img src="img4.jpg">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 15</div>
+    <img src="img5.jpg">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 15</div>
+    <img src="img6.jpg">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">7 / 15</div>
+    <img src="img7.jpg">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">8 / 15</div>
+    <img src="img8.jpg">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">9 / 15</div>
+    <img src="img9.jpg">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">10 / 15</div>
+    <img src="img10.jpg">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">11 / 15</div>
+    <img src="img11.jpg">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">12 / 15</div>
+    <img src="img12.jpg">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">13 / 15</div>
+    <img src="img13.jpg">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">14 / 15</div>
+    <img src="img14.jpg">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">15 / 15</div>
+    <img src="img15.jpg">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div class="dots">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+  <span class="dot" onclick="currentSlide(5)"></span> 
+  <span class="dot" onclick="currentSlide(6)"></span> 
+  <span class="dot" onclick="currentSlide(7)"></span> 
+  <span class="dot" onclick="currentSlide(8)"></span> 
+  <span class="dot" onclick="currentSlide(9)"></span> 
+  <span class="dot" onclick="currentSlide(10)"></span> 
+  <span class="dot" onclick="currentSlide(11)"></span> 
+  <span class="dot" onclick="currentSlide(12)"></span> 
+  <span class="dot" onclick="currentSlide(13)"></span> 
+  <span class="dot" onclick="currentSlide(14)"></span> 
+  <span class="dot" onclick="currentSlide(15)"></span> 
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active2", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active2";
+}
+</script>
+<!-- sample -->
+</body>
+</html>
